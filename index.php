@@ -12,7 +12,7 @@
     <?php
     include 'header.php';
     ?>
-    <a href="form-add.php"><button class="btn btn-secondary mb-3" style="margin-left: 20px;">Thêm chi phí</button></a>
+    <a href="form-add.php"><button class="btn btn-secondary mb-3" style="margin-left: 20px; border-radius: 25px;">Thêm chi phí</button></a>
     <div>
         <table class="table table-hover">
             <thead>
@@ -52,10 +52,10 @@
                             <td><?php echo $staff; ?></td>
                             <td><?php echo $status; ?></td>
                             <td>
-                                <a href="process-del.php?id=<?php echo $id; ?>"><button class="btn btn-danger">Xóa</button></a>
+                                <a href="process-del.php?id=<?php echo $id; ?>"><button class="btn btn-danger" style="border-radius: 25px;">Xóa</button></a>
                             </td>
                             <td>
-                                <a href="process-update.php?id=<?php echo $id; ?>"><button class="btn btn-success">Sửa</button></a>
+                                <a href="process-update.php?id=<?php echo $id; ?>"><button class="btn btn-success" style="border-radius: 25px;">Sửa</button></a>
                             </td>
                         </tr>
             <?php

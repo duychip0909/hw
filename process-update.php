@@ -105,7 +105,7 @@ if (isset($_POST['btnUp'])) {
                         <input type="text" class="form-control" name="status" value="<?php echo $status ?>">
                     </div>
                 </div>
-                <button type="submit" name="btnUp" class="btn btn-secondary">Sửa</button>
+                <button type="submit" name="btnUp" class="btn btn-secondary" style="border-radius: 25px;">Sửa</button>
             </div>
         </form>
 

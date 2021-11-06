@@ -5,7 +5,7 @@
     $id = $_GET['id'];
 
     //2. Create SQL Query to Delete Admin
-    $sql = "DELETE FROM dbo_chiphi WHERE id='$id'";
+    $sql = "DELETE FROM dbo_chiphi WHERE id=$id";
 
     //Execute the Query
     $res = mysqli_query($conn, $sql);

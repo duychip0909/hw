@@ -14,7 +14,7 @@
     include 'header.php';
     include '../hw_1/config/config.php';
     ?>
-   
+
     <main class="container">
         <center>
             <h2 style="color: indianred;">Thêm thông tin khoản chi</h2>
@@ -54,7 +54,7 @@
 
             <div class="form-group row" style="padding-top: 35px;">
                 <div class="col-sm-10">
-                    <button type="submit" class="btn btn-info">Thêm</button>
+                    <button type="submit" class="btn btn-info" style="border-radius: 25px;">Thêm</button>
                 </div>
             </div>
         </form>
