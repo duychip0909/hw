@@ -1,3 +1,12 @@
+<?php
+session_start();
+if (!isset($_SESSION['loginOK'])) {
+    header("Location: login.php");
+}
+?>
+<?php
+include '../config/config.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,12 +14,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="../int.css">
     <title>HW</title>
 </head>
 
 <body>
     <?php
-    include 'header.php';
+    include("../header.php");
     ?>
     <a href="form-add.php"><button class="btn btn-secondary mb-3" style="margin-left: 20px; border-radius: 25px;">Thêm chi phí</button></a>
     <div>
@@ -26,7 +38,7 @@
                 </tr>
             </thead>
             <?php
-            include('../hw_1/config/config.php');
+        
 
             $sql = "SELECT * FROM dbo_chiphi";
             $res = mysqli_query($conn, $sql);
@@ -51,6 +63,12 @@
                             <td><?php echo $price; ?></td>
                             <td><?php echo $staff; ?></td>
                             <td><?php echo $status; ?></td>
+                            <td>
+                                <a href="process-del.php?id=<?php echo $id; ?>"><button class="btn btn-danger" style="border-radius: 25px;">Xóa</button></a>
+                            </td>
+                            <td>
+                                <a href="process-update.php?id=<?php echo $id; ?>"><button class="btn btn-success" style="border-radius: 25px;">Sửa</button></a>
+                            </td>
                         </tr>
             <?php
                     }

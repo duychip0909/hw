@@ -1,6 +1,6 @@
 <?php 
 
-    include('../hw_1/config/config.php');
+    include('../config/config.php');
 
     $id = $_GET['id'];
 
